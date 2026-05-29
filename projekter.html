@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projekter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <style>
+  
+
+    /* FLEX CONTAINER */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:space-around;
+      gap: 50px;
+      padding: 60px;
+      row-gap: 100px;
+    }
+
+    /* CARD */
+    .card {
+      width: 400px;
+      height: 600px;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+     
+    .card:hover {
+      transform: scale(1.10); 
+      transition: translateY (-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    /* IMAGE */
+    .card__img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      height: 400px;
+      object-fit: cover;
+      display:block;
+    }
+
+    /* CONTENT */
+    .card__content {
+      padding: 20px;
+    }
+
+    .card__title {
+      margin: 0 0 10px;
+      font-size: 28px;
+      color: #555;
+    }
+
+    .card__text {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #777;
+    }
+
+    /* BUTTON */
+    .card__button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      background-color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .card__button:hover {
+      background-color: #f1f1f1;
+    }
+.slider {
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.slider input {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.8s ease;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Move slides */
+#s1:checked ~ .slides {
+  transform: translateX(0);
+}
+
+#s2:checked ~ .slides {
+  transform: translateX(-33.333%);
+}
+
+#s3:checked ~ .slides {
+  transform: translateX(-66.666%);
+}
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dots label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+
+#s1:checked ~ .dots label:nth-child(1),
+#s2:checked ~ .dots label:nth-child(2),
+#s3:checked ~ .dots label:nth-child(3) {
+  background: white;
+}
+/* ARROWS */
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 52px;
+  height: 52px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0,0,0,0.45);
+  color: white;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  z-index: 10;
+  transition: 0.2s;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.75);
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 20px;
+}
+
+/* DOTS */
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dot.active {
+  background: white;
+}
+  </style>
+
+<body>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">
+      <div class="logo__box">NV</div>
+      <h1 class="logo__text">Noble Visuals</h1>
+    </div>
+
+    <div class="nav">
+      <a href="index.html">HJEM</a>
+      <a href="om-mig.html">OM MIG</a>
+      <a href="projekter.html">PROJEKTER</a>
+      <a href="kontakt.html">KONTAKT</a>
+    </div>
+  </div>
+
+    <!-- HERO -->
+  <div class="hero">
+
+    <div class="hero__content">
+      <h1 class="hero__title"> Projekter </h1>
+
+      <h2>Træd ind i min kreative atmosfære og oplev mine seneste værker</h2>
+
+    </div>
+
+  </div>
+
+  
+  <div class="container">
+    <!-- CARDS -->
+
+    <!-- CARD 1 -->
+    <div class="card">
+      <img src="images/Flask.jpeg" alt="Flask" class="card__img">
+
+      <div class="card__content">
+        <h2 class="card__title">Product Shot</h2>
+
+        <p class="card__text">
+    Reklame produktbilleder til branding og markedsføring.        </p>
+
+<a href="productshot.html" class="card__button">Læs mere</a>      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+      <img src="images/Flyer design.jpeg" alt="Flyer design" class="card__img">
+      <div class="card__content">
+        <h2 class="card__title">Grafisk Design - Flyer</h2>
+        <p class="card__text">
+    Flyers, plakater og visuelle materialer </p>
+
+<a href="flyerdesign.html" class="card__button">Læs mere</a>      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+      <img src="images/Ducky.jpeg" alt="ducky" class="card__img">
+
+      <div class="card__content">
+        <h2 class="card__title">Stop Motion</h2>
+
+        <p class="card__text">
+    Kreativ animation med fokus på historiefortælling.        </p>
+
+        <a href="stopmotion.html" class="card__button">Læs mere</a>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card">
+      <img src="images/ample dating.png" alt="App" class="card__img">
+
+      <div class="card__content">
+        <h2 class="card__title">App Design
+        </h2>
+
+        <p class="card__text">
+          Brugervenlig app-design med fokus på funktion og æstetik.
+        </p>
+
+        <a href="appdesign.html" class="card__button">Læs mere</a>
+      </div>
+    </div>
+  <!-- CARD 5 -->
+    <div class="card">
+      <img src="images/Menuimag.png" alt="Menu" class="card__img">
+
+      <div class="card__content">
+        <h2 class="card__title">Menu Design</h2>
+
+        <p class="card__text">
+          Design af menuer til restauranter og madbiler.
+        </p>
+
+        <a href="menudesign.html" class="card__button">Læs mere</a>
+      </div>
+    </div>
+  <!-- CARD 6 -->
+    <div class="card">
+      <img src="images/3D-hologram-display-Holocube-Pyramid.png" alt="Photography" class="card__img">
+
+      <div class="card__content">
+        <h2 class="card__title">Audiovisual Design</h2>
+
+        <p class="card__text">
+    Idéudvikling og audiovisuelle løsninger fra koncept til færdigt produkt.        </p>
+        <a href="audiovisual.html" class="card__button">Læs mere</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDER -->
+  <div class="slider">
+
+    <!-- LEFT ARROW -->
+<button class="arrow left" onclick="prevSlide()">❮</button>
+
+<!-- SLIDES -->
+  <div class="slides" id="slides">
+    <img src="images/Flyerdesign.jpeg" alt="Gallery image 1">
+    <img src="images/Menuimag.png" alt="Gallery image 2">
+    <img src="images/3D-hologram-display-Holocube-Pyramid.png" alt="Gallery image 3">
+    <img src="images/Flask.jpeg" alt="Gallery image 4">
+    <img src="images/Ducky.jpeg" alt="Gallery image 5">
+    <img src="images/ample dating.png" alt="Gallery image 6">
+</div>
+
+    <!-- RIGHT ARROW -->
+      <button class="arrow right" onclick="nextSlide()">❯</button>
+  <div class="dots" id="dots"></div>
+
+  </div>
+
+</div>
+<script>
+
+let currentSlide = 0;
+
+const slides = document.getElementById("slides");
+const totalSlides = slides.children.length;
+
+const dotsContainer = document.getElementById("dots");
+
+/* CREATE DOTS */
+
+for (let i = 0; i < totalSlides; i++) {
+
+  const dot = document.createElement("div");
+
+  dot.classList.add("dot");
+
+  if (i === 0) {
+    dot.classList.add("active");
+  }
+
+  dot.addEventListener("click", () => {
+    currentSlide = i;
+    updateSlider();
+  });
+
+  dotsContainer.appendChild(dot);
+}
+
+const dots = document.querySelectorAll(".dot");
+
+/* UPDATE SLIDER */
+
+function updateSlider() {
+
+  slides.style.transform =
+    `translateX(-${currentSlide * 100}%)`;
+
+  dots.forEach(dot => {
+    dot.classList.remove("active");
+  });
+
+  dots[currentSlide].classList.add("active");
+}
+
+/* NEXT */
+
+function nextSlide() {
+
+  currentSlide++;
+
+  if (currentSlide >= totalSlides) {
+    currentSlide = 0;
+  }
+
+  updateSlider();
+}
+
+/* PREVIOUS */
+
+function prevSlide() {
+
+  currentSlide--;
+
+  if (currentSlide < 0) {
+    currentSlide = totalSlides - 1;
+  }
+
+  updateSlider();
+}
+
+</script>
+
+
+  <footer class="footer">
+    <hero class="footer__hero">
+      <h2 class="footer__title">Noble Visuals</h2>
+      <p class="footer__subtitle">Multimediadesigner</p>
+    </hero>
+    <p class="footer__text">© 2024 Noble Visuals. All rights reserved.</p>
+  </footer> 
+
+</body>
+</html>
